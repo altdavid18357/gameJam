@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 522285466}
-  upStrength: 1
+  upStrength: 5
 --- !u!61 &522285468
 BoxCollider2D:
   m_ObjectHideFlags: 0
