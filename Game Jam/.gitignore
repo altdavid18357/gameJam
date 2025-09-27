@@ -3,6 +3,7 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 .utmp/
+<<<<<<< Updated upstream:.gitignore
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -10,6 +11,15 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+=======
+/Game_Jam/[Ll]ibrary/
+/Game_Jam/[Tt]emp/
+/Game_Jam/[Oo]bj/
+/Game_Jam/[Bb]uild/
+/Game_Jam/[Bb]uilds/
+/Game_Jam/[Ll]ogs/
+/Game_Jam/[Uu]ser[Ss]ettings/
+>>>>>>> Stashed changes:Unity.gitignore
 *.log
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
