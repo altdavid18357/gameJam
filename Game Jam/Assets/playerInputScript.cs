@@ -17,7 +17,7 @@ public class playerInputScript : MonoBehaviour
     {
         if (Input.anyKey == true)
         {
-            playerBody.velocity = Vector2.up *  upStrength;
+            playerBody.velocity = Vector2.up * upStrength;
         }
     }
 }
