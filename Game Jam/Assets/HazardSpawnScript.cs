@@ -9,6 +9,8 @@ public class HazardSpawnScript : MonoBehaviour
     public int spawnTimer;
     private float timer = 0;
     public GameObject lightning;
+    public GameObject fireball;
+    public GameObject tree;
     void Start()
     {
     }
@@ -32,9 +34,57 @@ public class HazardSpawnScript : MonoBehaviour
         int roll = Random.Range(0, 10);
         if (roll <= spawnRate)
         {
-            Instantiate(lightning, new Vector3((float)6.7, 0, 0), lightning.transform.rotation);
+            int hazardRoll = Random.Range(1, 5);
+            
+            if (hazardRoll == 1)
+            {
+                SpawnFireball();
+            }
+            else if (hazardRoll == 2)
+            {
+                SpawnWater();
+            }
+            else if (hazardRoll == 3)
+            {
+                SpawnLightning();
+            }
+            else if (hazardRoll == 4)
+            {
+                SpawnEarth();
+            }
+            
         }
         
+        
+    }
+
+    void SpawnFireball()
+    {
+        Instantiate(fireball, new Vector3(8, Random.Range(-3, 3), 0), fireball.transform.rotation);
+    }
+
+    void SpawnLightning()
+    {
+        Instantiate(lightning, new Vector3((float)6.7, 0, 0), lightning.transform.rotation);
+    }
+
+    void SpawnEarth()
+    {
+        // randomly chooses if its on floor or ceiling
+        int rotation = Random.Range(0, 2);
+        if (rotation == 0)
+        {
+            Instantiate(tree, new Vector3(9, (float)-0.4, 0), tree.transform.rotation);
+        }
+        else if (rotation == 1)
+        {
+            Instantiate(tree, new Vector3(9, (float)0.43, 0), new Quaternion(0, 0, 180, 0));
+        }
+
+    }
+
+    void SpawnWater()
+    {
         
     }
 }
