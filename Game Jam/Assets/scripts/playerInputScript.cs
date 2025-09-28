@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playerInputScript : MonoBehaviour
@@ -23,7 +20,6 @@ public class playerInputScript : MonoBehaviour
         {
             playerBody.velocity = Vector2.up * upStrength;
         }
-        
         
     }
 
