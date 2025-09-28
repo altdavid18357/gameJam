@@ -11,6 +11,7 @@ public class HazardSpawnScript : MonoBehaviour
     public GameObject lightning;
     public GameObject fireball;
     public GameObject tree;
+    public GameObject waterfall;
     void Start()
     {
     }
@@ -60,7 +61,11 @@ public class HazardSpawnScript : MonoBehaviour
 
     void SpawnFireball()
     {
-        Instantiate(fireball, new Vector3(8, Random.Range(-3, 3), 0), fireball.transform.rotation);
+        float heightOffset = 3;
+        float lowestPoint = transform.position.y - heightOffset;
+        float highestPoint = transform.position.y + heightOffset;
+            
+        Instantiate(fireball, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), Quaternion.Euler(0, 180, 0));
     }
 
     void SpawnLightning()
@@ -85,6 +90,8 @@ public class HazardSpawnScript : MonoBehaviour
 
     void SpawnWater()
     {
+        float height = Random.Range(-2.0f, 2.1f);
         
+        Instantiate(waterfall, new Vector3(9, height, 0), waterfall.transform.rotation);
     }
 }

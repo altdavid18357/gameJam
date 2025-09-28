@@ -10,7 +10,7 @@ public class playerInputScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        logicManager =  GameObject.FindGameObjectWithTag("logic").GetComponent<LogicManagerScript>();
+        logicManager =  GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManagerScript>();
     }
 
     // Update is called once per frame
