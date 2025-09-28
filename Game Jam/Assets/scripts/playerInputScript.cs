@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,13 @@ using UnityEngine;
 public class playerInputScript : MonoBehaviour
 {
     public Rigidbody2D playerBody;
+
     public float upStrength = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,7 +20,9 @@ public class playerInputScript : MonoBehaviour
     {
         if (Input.anyKey == true)
         {
-            playerBody.velocity = Vector2.up *  upStrength;
+            playerBody.velocity = Vector2.up * upStrength;
         }
     }
+
+    
 }
