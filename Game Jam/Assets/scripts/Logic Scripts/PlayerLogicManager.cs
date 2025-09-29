@@ -8,6 +8,7 @@ public class PlayerLogicManager : MonoBehaviour
     public GameObject GameOverScreen;
     private float Timer = 0f;
     private bool isAlive = true;
+    public playerInputScript playerInput;
     void Update()
     {
         Timer += Time.deltaTime;

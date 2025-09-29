@@ -3,14 +3,13 @@ using UnityEngine;
 public class playerInputScript : MonoBehaviour
 {
     public Rigidbody2D playerBody;
-    public LogicManagerScript logicManager;
     public float upStrength = 1;
     private bool isAlive =  true;
 
     // Start is called before the first frame update
     void Start()
     {
-        logicManager =  GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManagerScript>();
+
     }
 
     // Update is called once per frame
@@ -23,11 +22,8 @@ public class playerInputScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SetAlive(bool alive)
     {
-        logicManager.GameOver();
-        isAlive = false;
+        isAlive = alive;
     }
-
-    
 }

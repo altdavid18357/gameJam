@@ -12,6 +12,7 @@ public class HazardSpawnScript : MonoBehaviour
     public GameObject fireball;
     public GameObject tree;
     public GameObject waterfall;
+    private int lastHazard = 0;
     void Start()
     {
     }
@@ -36,6 +37,11 @@ public class HazardSpawnScript : MonoBehaviour
         if (roll <= spawnRate)
         {
             int hazardRoll = Random.Range(1, 5);
+            while (lastHazard == hazardRoll)
+            {
+                hazardRoll = Random.Range(1, 5);
+            }
+            lastHazard = hazardRoll;
             
             if (hazardRoll == 1)
             {
@@ -70,7 +76,7 @@ public class HazardSpawnScript : MonoBehaviour
 
     void SpawnLightning()
     {
-        Instantiate(lightning, new Vector3((float)6.7, 0, 0), lightning.transform.rotation);
+        Instantiate(lightning, new Vector3((float)4.5, 0, 0), lightning.transform.rotation);
     }
 
     void SpawnEarth()
